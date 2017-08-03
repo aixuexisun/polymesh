@@ -3,22 +3,25 @@ from distutils.extension import Extension
 
 import numpy as np
 
-ext = [Extension("polymesh",
-                sources=["polymesh/polymesh.c"],
-                libraries=[],
-                language="c", 
-                include_dirs = [np.get_include()],
-                extra_compile_args=["-Wno-unreachable-code"])]
+meshModule = Extension("polymesh.mesh",
+             sources=["polymesh/mesh.c"],
+             include_dirs = [np.get_include()],
+             extra_compile_args=["-Wno-unreachable-code"])
 
+hydrostaticModule = Extension("polymesh.hydrostatic",
+					sources=["polymesh/hydrostatic.c"],
+					include_dirs = [np.get_include()],
+					extra_compile_args=["-Wno-unreachable-code"])
 
 setup(name="polymesh",
 	  version="0.1",
-	  description="polygonal mesh handling class, written in cython",
+	  description="A library for setting up simulations in OpenFOAM",
 	  author="Jarle A. Kramer",
 	  author_email="jarlekramer@gmail.com",
 	  license="MIT",
 	  packages=["polymesh"],
 	  install_requires=["numpy",],
+	  python_requires=">=3",
 	  include_package_data=True,
-	  ext_modules=ext,
+	  ext_modules=[meshModule, hydrostaticModule],
 )

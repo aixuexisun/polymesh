@@ -9,7 +9,7 @@ cimport numpy as np
 from libc.stdlib cimport atof
 from libc.math cimport sqrt, fabs
 
-cimport polymesh
+cimport polymesh.mesh
 
 cimport cython
 
