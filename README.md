@@ -11,3 +11,4 @@ Download and cd into the downloaded folder. Execute
 ```
 python setup.py install
 ```
+(It only works for python 3, so maybe you need to use ```python3``` rather that ```python```)
