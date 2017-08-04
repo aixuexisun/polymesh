@@ -8,6 +8,6 @@ A library of functions that can perform "hydrostatic" caculations on mesh object
 
 ## install instructions
 Download and cd into the downloaded folder. Execute
-´´´
+```
 python setup.py install
-
+```
