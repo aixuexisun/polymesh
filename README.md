@@ -7,5 +7,7 @@ A simple mesh handling library, written in Cython for speed. It can import mesh 
 A library of functions that can perform "hydrostatic" caculations on mesh objects. This includes extracting the part of the mesh that is below a specifed plane, calculate volume, surface area, volume centroid and dimensions
 
 ## install instructions
-Download
-cd into the folder, and execute python setup.py install. 
+Download and cd into the downloaded folder. Execute
+´´´
+python setup.py install
+
